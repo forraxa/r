@@ -53,3 +53,4 @@ https://stackoverflow.com/questions/14882033/failing-to-load-roracle-unable-to-l
 export LD_LIBRARY_PATH="/usr/lib/oracle/11.2/client64/lib:/home/nguiller/Downloads/instantclient_11_2" && export ORACLE_HOME="/usr/lib/oracle/11.2/client64/" && export OCI_LIB="/usr/lib/oracle/11.2/client64/lib" && export LD_LIBRARY_PATH_64="/usr/lib/oracle/11.2/client64/lib:/home/nguiller/Downloads/instantclient_11_2"
 
 R CMD INSTALL --configure-ags='--with-oci-lib=/usr/lib/oracle/11.2/client64/lib --with-oci-inc=/usr/include/oracle/11.2/client64' ROracle_1.1-8.tar.gz
+
