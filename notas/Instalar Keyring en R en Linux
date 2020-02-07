@@ -1,0 +1,34 @@
+# Instalar Keyring
+Tiene dependencia de sodium, vamos a ver cuales hay. Dentro del contenedor como root:
+```
+apt-get update
+apt-cache search libsodium
+libsodium-dbg - Network communication, cryptography and signaturing library - debug symbols
+libsodium-dev - Network communication, cryptography and signaturing library - headers
+libsodium18 - Network communication, cryptography and signaturing library
+```
+
+Lo instalamos
+```
+sudo apt-get install libsodium18 libsodium-dev
+```
+
+Para usar el backen de fichero y no el de env:
+```
+sudo apt-get install  libsecret-1-dev
+```
+
+
+
+Desde R instalamos keyring:
+```
+remove.packages("keyring")
+install.packages("keyring")
+library(keyring)
+ss_backend = backend_secret_service$new()
+ss_backend$is_available()
+```
+
+
+### Material
+https://community.rstudio.com/t/keyring-on-amazon-ec2/34595
